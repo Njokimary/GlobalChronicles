@@ -158,3 +158,63 @@ nav {
         display: block;
     }
 }
+
+/**css card**/
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+    margin: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    box-shadow: 7px 7px 25px 1px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card img{
+    min-width: 210px;
+    background-color: #4361ee;
+}
+.card h4,
+.card div{
+    padding: 5px 10px;
+    margin: 0px;
+
+}
+.publishbyDate{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.publishbyDate p{
+    margin: 0px;
+    font-size: 14px;
+    align-items: center;
+    color: #a5a1a1;
+}
+.publishbyDate span{
+    padding:  0px 10px;
+}
+.desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 0px;
+}
+@media all and (min-width:700px) {
+    main{
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card h4,
+.card div{
+    padding: 5px 15px;
+
+}
+}
