@@ -1,48 +1,80 @@
-*{
+* {
     box-sizing: border-box;
-
 }
-img{
+
+img {
     height: 50px;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     margin: 0;
     background: #f5f6f9;
 }
-header{
+
+header {
     background-color: white;
-    height:65px;
+    height: 65px;
     display: flex;
     align-items: center;
     padding: 5px 10px;
     justify-content: space-between;
-    box-shadow: 0px 3px 10px 0 rgba(80,119,242,0.3);
+    box-shadow: 0px 3px 10px 0 rgba(80, 119, 242, 0.3);
 }
 
-/* nav,.InputSearch{
-    display: none;
-} */
-
-
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
     padding: 0;
-
+    margin: 0;
 }
-nav ul li{
+
+nav ul li {
     cursor: pointer;
-    
 }
 
-nav ul li:hover{
-    color:#4361ee;
+nav ul li:hover {
+    color: #4361ee;
 }
 
-.InputSearch{
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add even spacing between navigation elements */
+    padding: 0 20px; /* Add padding on both sides of the navigation elements */
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.desktop nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.desktop nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.desktop nav ul li {
+    cursor: pointer;
+}
+
+.desktop nav ul li:hover {
+    color: #4361ee;
+}
+
+.desktop .InputSearch {
     display: flex;
     align-items: center;
     height: 40px;
@@ -50,21 +82,19 @@ nav ul li:hover{
     border-radius: 35px;
     background-color: red;
     overflow: hidden;
-    border: 1.5 solid #4361ee;
-
+    border: 1.5px solid #4361ee;
 }
 
-.InputSearch input{
+.desktop .InputSearch input {
     width: 100%;
     height: 100%;
     padding: 0px 15px;
     border: none;
     outline: none;
     font-size: 16px;
-
 }
 
-.InputSearch span{
+.desktop .InputSearch span {
     width: 70px;
     background-color: #4361ee;
     height: 100%;
@@ -72,66 +102,59 @@ nav ul li:hover{
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    /* color: #ffff; */
-
 }
 
-.menuBtn{
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.menuBtn hover{
-    background-color: #4361ee;
-    color: white;
-}
-
-.desktop{
-    display: none;
-}
-
-@media all and (min-width:700px) {
-    header {
-        padding: 5px 20px;
-
-    }
-    .desktop{
-        display: flex;
-    }
-    .menuBtn{
-        display: none;
-    }
-    
-}
-
-/**mobile menu **/
-.mobile{
+.mobile {
     position: absolute;
     top: 75px;
     width: 100%;
     max-width: 700px;
     background-color: #f5f6f9;
-    height: calc(100%-100px);
-
+    height: calc(100% - 150px);
+    padding: 10px;
+    display: none;
 }
+
 .mobile nav,
-.mobile nav ul{
+.mobile nav ul {
     flex-direction: column;
-
 }
-.mobile .InputSearch{
+
+.mobile .InputSearch {
     height: 35px;
-    width: 300px;
+    width: 95%;
+    margin: 10px auto;
 }
 
-@media all and (min-width:700px){
-    .mobile{
+.mobile .InputSearch input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.mobile .InputSearch span {
+    width: 70px;
+    background-color: #4361ee;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media all and (max-width: 700px) {
+    .desktop {
         display: none;
+    }
+
+    .mobile {
+        display: block;
     }
 }
