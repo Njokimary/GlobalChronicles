@@ -7,3 +7,7 @@ async function fetchData(query){
     console.log(data)
 }
 fetchData()
+
+let mobilemenu = document.querySelector(".mobile")
+let menuBtn = document.querySelector(".menuBtn")
+let menuBtnDisplay = false;
