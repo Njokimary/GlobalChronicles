@@ -74,24 +74,26 @@ nav {
     color: #4361ee;
 }
 
-.desktop .InputSearch {
+.desktop .InputSearch .form {
     display: flex;
     align-items: center;
     height: 40px;
     width: 400px;
     border-radius: 35px;
-    background-color: red;
     overflow: hidden;
+    background-color: #ffffff;
     border: 1.5px solid #4361ee;
+    transition: all 0.3s ease;
 }
 
 .desktop .InputSearch input {
-    width: 100%;
+    flex: 1;
     height: 100%;
     padding: 0px 15px;
     border: none;
     outline: none;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .desktop .InputSearch span {
@@ -102,6 +104,17 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.desktop .InputSearch span i {
+    margin-top: 2px;
+}
+
+.desktop .InputSearch span:hover {
+    background-color: #3b4dba;
 }
 
 .mobile {
@@ -124,15 +137,23 @@ nav {
     height: 35px;
     width: 95%;
     margin: 10px auto;
+    display: flex;
+    align-items: center;
+    border-radius: 35px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1.5px solid #4361ee;
+    transition: all 0.3s ease;
 }
 
 .mobile .InputSearch input {
-    width: 100%;
+    flex: 1;
     height: 100%;
     padding: 0px 15px;
     border: none;
     outline: none;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .mobile .InputSearch span {
@@ -143,6 +164,17 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mobile .InputSearch span i {
+    margin-top: 2px;
+}
+
+.mobile .InputSearch span:hover {
+    background-color: #3b4dba;
 }
 
 .hidden {
@@ -218,7 +250,6 @@ main {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     margin: 0;
-    
 }
 
 @media all and (min-width: 700px) {
