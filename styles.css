@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
 }
@@ -13,6 +14,7 @@ body {
     background: #f5f6f9;
 }
 
+/* Header Styles */
 header {
     background-color: white;
     height: 65px;
@@ -74,19 +76,22 @@ nav {
     color: #4361ee;
 }
 
-.desktop .InputSearch .form {
+/* Styling for the desktop and mobile search bar */
+.InputSearch {
+    height: 40px;
+    width: 95%;
+    max-width: 400px;
+    margin: 10px auto;
     display: flex;
     align-items: center;
-    height: 40px;
-    width: 400px;
     border-radius: 35px;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 1.5px solid #4361ee;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-.desktop .InputSearch input {
+.InputSearch input {
     flex: 1;
     height: 100%;
     padding: 0px 15px;
@@ -96,25 +101,27 @@ nav {
     background-color: transparent;
 }
 
-.desktop .InputSearch span {
-    width: 70px;
-    background-color: #4361ee;
+.InputSearch span {
+    width: 40px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #fff;
+    color: #555;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-.desktop .InputSearch span i {
+.InputSearch span i {
     margin-top: 2px;
 }
 
-.desktop .InputSearch span:hover {
-    background-color: #3b4dba;
+.InputSearch span:hover {
+    background-color: #e1e1e1;
 }
 
 .mobile {
@@ -133,17 +140,19 @@ nav {
     flex-direction: column;
 }
 
+/* Styling for the mobile search bar */
 .mobile .InputSearch {
     height: 35px;
     width: 95%;
+    max-width: 400px;
     margin: 10px auto;
     display: flex;
     align-items: center;
     border-radius: 35px;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 1.5px solid #4361ee;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .mobile .InputSearch input {
@@ -157,16 +166,18 @@ nav {
 }
 
 .mobile .InputSearch span {
-    width: 70px;
-    background-color: #4361ee;
+    width: 40px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #fff;
+    color: #555;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .mobile .InputSearch span i {
@@ -174,7 +185,7 @@ nav {
 }
 
 .mobile .InputSearch span:hover {
-    background-color: #3b4dba;
+    background-color: #e1e1e1;
 }
 
 .hidden {
@@ -191,7 +202,7 @@ nav {
     }
 }
 
-/**css card**/
+/** CSS for cards **/
 main {
     display: flex;
     flex-direction: column;
@@ -215,7 +226,6 @@ main {
     width: 100%;
     height: auto;
     max-height: 210px;
-    /* background-color: #4361ee; */
 }
 
 .card a {
