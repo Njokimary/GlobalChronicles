@@ -175,6 +175,8 @@ main {
     box-shadow: 7px 7px 25px 1px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
     overflow: hidden;
+    padding-bottom: 10px;
+    background: #ffffff;
 }
 
 .card img {
@@ -186,7 +188,7 @@ main {
 
 .card a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 
 .card h4,
@@ -216,6 +218,7 @@ main {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     margin: 0;
+    
 }
 
 @media all and (min-width: 700px) {
