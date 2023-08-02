@@ -215,7 +215,7 @@ main {
     width: 100%;
     height: auto;
     max-height: 210px;
-    background-color: #4361ee;
+    /* background-color: #4361ee; */
 }
 
 .card a {
