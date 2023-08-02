@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function renderMain(arr) {
       let mainHtml = '';
       for (let i = 0; i < arr.length; i++) {
+        if(arr[i].urlToImage){
         mainHtml += `<div class="card">
                       <a href="${arr[i].url}">
                         <img src="${arr[i].urlToImage}" alt="${arr[i].title}">
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                       </a>
                     </div>`;
+        }
       }
   
       const mainElement = document.querySelector(".main");
